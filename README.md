@@ -54,8 +54,7 @@ End-to-end data engineering use case for a real estate company (similar to Nawy)
 ├─ README.md
 ├─ .gitignore
 ├─ requirements.txt
-├─ docs/
-│  └─ Nawy_DE_Usecase_Documentation.pdf
+├─ Nawy_DE_Usecase_Documentation.pdf
 ├─ sql/
 │  ├─ 01_staging.sql          # create stg_leads / stg_sales from raw
 │  ├─ 02_lead_dims.sql        # lead-related dimensions (status, type, contact, source, campaign)
@@ -63,7 +62,7 @@ End-to-end data engineering use case for a real estate company (similar to Nawy)
 │  ├─ 04_sales_dims.sql       # sales-specific dims (property type, sale category)
 │  ├─ 05_fact_lead.sql        # fact_lead (latest lead per id)
 │  └─ 06_fact_sale.sql        # fact_sale (joined to fact_lead + dims)
-├─ airflow/
+├─ dags/
 │  └─ realestate_dag.py       # Airflow DAG wiring the whole pipeline
-└─ ingestion/
+└─ scripts/
    └─ ingestion.py            # Python script ingesting raw files into MySQL
